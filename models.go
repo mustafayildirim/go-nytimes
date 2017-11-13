@@ -8,6 +8,11 @@ import (
 
 type URL url.URL
 
+func (u URL) String() string {
+	z := url.URL(u)
+	return z.String()
+}
+
 type Time time.Time
 
 func (u *URL) UnmarshalJSON(b []byte) error {
